@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<link rel="stylesheet" href="../login-modal/login-modal.css">   
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameVault - تماس با ما</title>
+<link rel="stylesheet" href="contact.css">
+<link rel="stylesheet" href="contact_fa.css">
+
+<link rel="stylesheet" href="../responsive.css">
+</head>
+<body>
+
+  <!-- ===================== header ===================== -->
+  <header>
+    <div class="wrapper header-inner site-header">
+      <div class="logo">
+        <img src="../img/icons/game_valet_icon.png" alt="لوگوی GameVault">
+        Game<span>Vault</span>
+      </div>
+
+      <nav>
+        <a href="../home/game.html" >خانه</a>
+        <a href="../games/games.html">بازی‌ها</a>
+        <a href="../software/software.html">نرم‌افزار</a>
+        <a href="../gift-cards/gift-cards.html">گیفت کارت</a>
+        <a href="../deals/deals.html">تخفیف‌ها</a>
+      </nav>
+
+      <div class="header-actions icons">
+        <div class="search-box">
+          <a href=""><img src="../img/icons/search.png" alt="جستجو"></a>
+          <input type="text" placeholder="جستجوی بازی..." data-hints="Elden Ring|Cyberpunk 2077|Red Dead Redemption 2|Hogwarts Legacy|Minecraft">
+        </div>
+        <div class="icon-btn">
+          <img src="../img/icons/shopping.png" alt="سبد خرید">
+        </div>
+        <div class="icon-btn js-open-login">
+          <img src="../img/icons/user.png" alt="حساب کاربری">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="../img/contact_us/file_0000000040a882108ad7ae09f2ad5cc0.png" alt="سربازی با حلقه‌ی درخشان" class="hero-bg">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="eyebrow">تماس با ما<span class="dash"></span></div>
+      <h1>با ما در تماس باش<br><span class="highlight">اینجاییم تا کمک کنیم</span></h1>
+      <p>
+      برای دریافت راهنمایی، پیگیری سفارش‌ها یا مطرح کردن سؤالاتت، از طریق فرم زیر با ما در 
+      ارتباط باش. ما در کنار تو هستیم تا تجربه‌ای مطمئن و راحت داشته باشی
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== اطلاعات تماس + فرم ===================== -->
+  <section class="wrapper contact-section">
+
+    <div class="contact-info-card">
+      <div class="eyebrow">اطلاعات تماس<span class="dash"></span></div>
+
+      <div class="contact-item">
+        <div class="contact-icon"><img src="../img/icons/email.png" alt=""></div>
+        <div>
+          <h4>ایمیل بزن</h4>
+          <p>support@gamevault.com</p>
+          <span>ظرف ۲۴ ساعت پاسخ می‌دهیم.</span>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon"><img src="../img/icons/call.png" alt=""></div>
+        <div>
+          <h4>تماس بگیر</h4>
+          <p>+1 (555) 123-4567</p>
+          <span> از شنبه تا جمعه ،۹ صبح تا ۶ عصر</span>
+        </div>
+      </div>
+
+
+      <img src="images/scribble-underline.png" alt="" class="scribble">
+    </div>
+
+    <div class="contact-form-card">
+      <div class="eyebrow">برامون پیام بذار<span class="dash"></span></div>
+
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <input type="text" placeholder="نام و نام خانوادگی *">
+          <input type="email" placeholder="آدرس ایمیل *">
+        </div>
+
+        <select>
+          <option value="">موضوع *</option>
+          <option>سؤال عمومی</option>
+          <option>پشتیبانی سفارش</option>
+          <option>مشکل فنی</option>
+          <option>همکاری</option>
+        </select>
+
+        <textarea placeholder="پیام شما *" rows="5"></textarea>
+
+        <div class="form-bottom">
+          <div class="privacy-note">
+            <span class="privacy-icon"><img src="../img/icons/security.png" alt=""></span>
+            حریم خصوصی‌ات برایمان مهم است. اطلاعاتت نزد ما امن است.
+          </div>
+          <button type="submit" class="btn-filled">✈ ارسال پیام</button>
+        </div>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- ===================== footer ===================== -->
+  <footer>
+    <div class="wrapper footer-inner">
+      <div class="logo">
+        <img src="../img/icons/game_valet_icon.png" alt="لوگوی GameVault">
+        Game<span>Vault</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="../about_us/about.html">درباره ما</a>
+        <a href="../contact_us/contact.html">تماس با ما</a>
+        <a href="#">شرایط استفاده از خدمات</a>
+        <a href="#">حریم خصوصی</a>
+      </div>
+
+      <div class="social-links">
+        <span><img src="../img/icons/discord.png" alt="Discord"></span>
+        <span><img src="../img/icons/telegram.png" alt="Twitter"></span>
+        <span><img src="../img/icons/instagram.png" alt="Instagram"></span>
+        <span><img src="../img/icons/youtube.png" alt="YouTube"></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== modal ===================== -->
+
+<div class="modal-overlay" id="loginOverlay">
+  <div class="login-modal">
+    <button class="modal-close" id="loginClose">✕</button>
+
+    <div class="modal-form-side">
+      <h2>خوش برگشتی</h2>
+      <p>برای ادامه وارد حساب کاربری‌ات شو.</p>
+
+      <div class="error-banner" id="loginError"></div>
+      <div class="success-banner" id="loginSuccess"></div>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="loginEmail">آدرس ایمیل</label>
+          <div class="input-icon-wrap">
+            <span class="input-icon-left">✉️</span>
+            <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">رمز عبور</label>
+          <div class="input-icon-wrap">
+            <span class="input-icon-left">🔒</span>
+            <input type="password" id="loginPassword" placeholder="رمز عبور" autocomplete="current-password" required>
+            <button type="button" class="toggle-password" id="togglePassword">👁️</button>
+          </div>
+        </div>
+
+        <div class="form-row-between">
+          <label class="remember-me">
+            <input type="checkbox">
+            مرا به خاطر بسپار
+          </label>
+          <a href="#" class="forgot-link">رمز عبورت را فراموش کرده‌ای؟</a>
+        </div>
+
+        <button type="submit" class="submit-btn">ورود</button>
+      </form>
+
+      <p class="modal-switch">حساب نداری؟ <a href="#" id="showSignup">ثبت‌نام</a></p>
+
+      <div id="signupBox" style="display:none">
+        <h2>ساخت حساب جدید</h2>
+        <p>اطلاعاتت را وارد کن تا حسابت ساخته شود.</p>
+
+        <div class="signup-msg signup-error" id="signupError"></div>
+        <div class="signup-msg signup-success" id="signupSuccess"></div>
+
+        <form id="signupForm" novalidate>
+          <div class="form-group">
+            <label for="signupName">نام و نام خانوادگی</label>
+            <div class="input-icon-wrap">
+              <span class="input-icon-left">👤</span>
+              <input type="text" id="signupName" placeholder="نام و نام خانوادگی" autocomplete="name" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signupEmail">آدرس ایمیل</label>
+            <div class="input-icon-wrap">
+              <span class="input-icon-left">✉️</span>
+              <input type="email" id="signupEmail" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signupPassword">رمز عبور</label>
+            <div class="input-icon-wrap">
+              <span class="input-icon-left">🔒</span>
+              <input type="password" id="signupPassword" placeholder="رمز عبور" autocomplete="new-password" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signupConfirm">تکرار رمز عبور</label>
+            <div class="input-icon-wrap">
+              <span class="input-icon-left">🔒</span>
+              <input type="password" id="signupConfirm" placeholder="تکرار رمز عبور" autocomplete="new-password" required>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">ثبت‌نام</button>
+        </form>
+
+        <p class="modal-switch">قبلاً ثبت‌نام کرده‌ای؟ <a href="#" id="showLogin">ورود</a></p>
+      </div>
+    </div>
+
+    <div class="modal-image-side">
+
+      <video src="../login-modal/login-modal.mp4" autoplay muted loop playsinline></video>
+    </div>
+  </div>
+</div>
+
+<script src="../login-modal/login-modal.js"></script>
+<script src="contact.js"></script>  
+
+
+</body>
+</html>

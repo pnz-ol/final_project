@@ -1,0 +1,125 @@
+/* =====================================================
+   game_fa.css
+   تنظیمات فارسی + استایل افکت‌های جاوا اسکریپت
+   این فایل بعد از game_style.css لود می‌شود.
+   فقط از رنگ‌های خود سایت (متغیرهای :root) استفاده شده.
+   هیچ اندازه یا جای عکس و آیکونی تغییر نکرده.
+   ===================================================== */
+
+/* ---------- ۱) فونت فارسی ---------- */
+body,
+input,
+button {
+  font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+}
+
+/* ---------- ۲) جهت نوشتن متن‌ها (راست به چپ) ----------
+   فقط خود متن‌ها راست‌چین می‌شوند؛
+   چیدمان صفحه (هدر، هیرو، گرید و ...) سر جای قبلی‌اش می‌ماند. */
+.eyebrow,
+.hero-title,
+.hero-desc,
+.btn-secondary,
+.section-head h2,
+.section-head a,
+.footer-brand p,
+.footer-col,
+.footer-bottom p,
+.search-box input,
+.modal-form-side h2,
+.modal-form-side p,
+.modal-form-side label,
+.forgot-link,
+.modal-tagline {
+  direction: rtl;
+}
+
+/* ایمیل همیشه انگلیسی است، پس چپ‌چین می‌ماند */
+#loginEmail {
+  direction: ltr;
+}
+
+/* حروف فارسی به هم وصل‌اند؛ فاصله بین حروف آن‌ها را از هم جدا می‌کند */
+.eyebrow {
+  letter-spacing: 0;
+  font-size: 15px;   /* فونت فارسی کمی کوچک‌تر دیده می‌شود */
+}
+
+/* ---------- ۳) افکت تایپ (مکان‌نما چشمک‌زن) ---------- */
+.eyebrow.typing::after {
+  content: '|';
+  color: var(--yellow);
+  margin-right: 4px;
+  animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ---------- ۴) ضربدرهای شناور هیرو ---------- */
+.deco-x {
+  transition: translate 0.3s ease-out;
+  animation: floatX 4s ease-in-out infinite;
+}
+.deco-x.x2 { animation-delay: 1s; }
+.deco-x.x3 { animation-delay: 2s; }
+
+@keyframes floatX {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-10px) rotate(20deg); }
+}
+
+/* ---------- ۵) ظاهر شدن آرام موقع اسکرول ---------- */
+.reveal {
+  opacity: 0;
+}
+.reveal.show {
+  animation: fadeUp 0.7s ease both;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; translate: 0 40px; }
+  to   { opacity: 1; translate: 0 0; }
+}
+
+/* ---------- ۶) نوار پیشرفت اسکرول (بالای صفحه) ---------- */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  z-index: 10000;
+  background: linear-gradient(90deg, var(--yellow), var(--purple));
+  border-radius: 0 10px 10px 0;
+}
+
+/* کسانی که انیمیشن را در سیستم‌شان خاموش کرده‌اند */
+@media (prefers-reduced-motion: reduce) {
+  .deco-x { animation: none; }
+  .reveal { opacity: 1; }
+  .reveal.show { animation: none; }
+}
+
+
+/* ---------- ثبت‌نام داخل مودال ---------- */
+.modal-form-side { overflow-y: auto; max-height: 90vh; }
+
+.modal-switch {
+  margin-top: 16px; text-align: center; font-size: 13.5px;
+  color: var(--text-muted, #9A9AAE); direction: rtl;
+}
+.modal-switch a { color: var(--yellow, #F5D033); font-weight: bold; text-decoration: none; }
+.modal-switch a:hover { text-decoration: underline; }
+
+#signupBox h2, #signupBox p, #signupBox label { direction: rtl; }
+#signupEmail { direction: ltr; }
+
+.signup-msg {
+  display: none; padding: 10px 14px; border-radius: 8px;
+  font-size: 13px; margin-bottom: 14px; direction: rtl;
+}
+.signup-error   { background: rgba(239, 68, 68, 0.12); color: #ff8a8a; border: 1px solid rgba(239, 68, 68, 0.4); }
+.signup-success { background: rgba(34, 197, 94, 0.12); color: #6ee7a0; border: 1px solid rgba(34, 197, 94, 0.4); }

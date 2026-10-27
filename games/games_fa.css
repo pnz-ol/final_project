@@ -1,0 +1,386 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap');
+
+/* ---------- ۱) فونت فارسی ---------- */
+
+body,
+input,
+button,
+select,
+textarea {
+  font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+}
+
+/* ---------- ۲) هدر: اندازه و فاصله‌ها (مرجع: صفحه اصلی) ---------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 60px;
+  max-width: none;
+  height: auto;
+  margin: 0;
+}
+
+.site-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.site-header .logo img {
+  width: 38px;
+  height: 38px;
+}
+
+
+.site-header nav,
+.site-header nav ul {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.site-header nav a {
+  display: block;
+  position: relative;
+  padding-bottom: 8px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+
+.site-header nav a.active {
+  color: var(--text);
+}
+.site-header nav a.active::after {
+  width: 100%;
+}
+
+
+.site-header .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: 0;
+}
+
+.site-header .search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 240px;
+  padding: 10px 18px;
+}
+
+.site-header .search-box input {
+  font-size: 14px;
+  direction: rtl;
+}
+
+
+.site-header .search-box a,
+.site-header .icon-btn,
+.site-header .icon-btn a {
+  display: flex;
+  align-items: center;
+}
+
+.site-header .header-actions img {
+  width: 20px;
+  height: 20px;
+  mix-blend-mode: screen;
+}
+
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* ---------- ۳) افکت تایپ (مکان‌نمای چشمک‌زن) ---------- */
+.eyebrow {
+  letter-spacing: 0; 
+  direction: rtl;
+}
+
+.eyebrow.typing::after {
+  content: '|';
+  color: var(--yellow);
+  margin-right: 4px;
+  animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ---------- ۴) ظاهر شدن آرام موقع اسکرول ---------- */
+.reveal {
+  opacity: 0;
+}
+.reveal.show {
+  animation: fadeUp 0.7s ease both;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; translate: 0 40px; }
+  to   { opacity: 1; translate: 0 0; }
+}
+
+/* ---------- ۵) نوار پیشرفت اسکرول ---------- */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  z-index: 10000;
+  background: linear-gradient(90deg, var(--yellow), var(--purple));
+  border-radius: 0 10px 10px 0;
+}
+
+/* ---------- ۶) تبلت و موبایل ---------- */
+@media (max-width: 900px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+
+  .site-header {
+    flex-wrap: wrap;
+    padding: 14px 18px;
+    gap: 12px 14px;
+  }
+
+
+  .site-header .header-actions {
+    display: contents;
+  }
+
+  .site-header .logo         { order: 1; margin-inline-end: auto; }
+  .site-header .icon-btn     { order: 2; }
+  .site-header .menu-toggle  { order: 3; display: flex; }
+  .site-header .search-box   { order: 4; width: 100%; }
+  .site-header nav           { order: 5; }
+
+
+  .site-header nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 6px 18px;
+    background: var(--panel);
+    border-radius: 14px;
+  }
+  .site-header nav.open {
+    display: flex;
+  }
+  .site-header nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  .site-header nav a {
+    padding: 14px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header .logo {
+    font-size: 20px;
+  }
+  .site-header .logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .fixed-icon-final {
+    bottom: 16px;
+    right: 16px;
+  }
+  .fixed-icon-final a img {
+    width: 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; }
+  .reveal.show { animation: none; }
+}
+
+/* ---------- مودال ورود ا) ---------- */
+.modal-overlay {
+  direction: ltr;
+}
+.modal-form-side h2,
+.modal-form-side p,
+.modal-form-side label,
+.forgot-link,
+.modal-tagline {
+  direction: rtl;
+}
+#loginEmail {
+  direction: ltr; 
+}
+
+:root { --page-pad: 60px; }   
+@media (max-width: 900px) { :root { --page-pad: 20px; } }
+
+header { border-bottom: 0; }  
+
+
+.wrapper:not(.site-header) { max-width: none; padding: 0 var(--page-pad); }
+.page-wrap.wrapper { padding: 24px var(--page-pad) 50px; }
+
+
+.site-header { direction: ltr; }
+.footer-inner { direction: ltr; }
+
+
+.hero { direction: ltr; }
+.hero-content { direction: rtl; text-align: right; }
+
+
+.view-toggle { margin-left: 0; margin-inline-start: auto; }
+
+
+.price-row { flex-wrap: wrap; gap: 8px; }
+.price { font-size: 14px; }
+
+/* ---------- حالت‌هایی که جاوا اسکریپت می‌سازد ---------- */
+.empty-message {
+  display: none; grid-column: 1 / -1; text-align: center;
+  color: var(--text-muted); padding: 40px 0;
+}
+.cart-badge { display: none; }
+.cart-badge.pop { animation: pop 0.4s ease; }
+@keyframes pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.6); }
+  100% { transform: scale(1); }
+}
+
+
+.games-grid.list-view { grid-template-columns: 1fr; }
+.games-grid.list-view .game-card { display: flex; align-items: center; gap: 16px; }
+.games-grid.list-view .card-image { width: 90px; flex-shrink: 0; margin-bottom: 0; }
+.games-grid.list-view .game-card h4 { flex: 1; margin-bottom: 0; }
+.games-grid.list-view .rating-row { margin-bottom: 0; white-space: nowrap; }
+.games-grid.list-view .price-row { min-width: 190px; }
+
+/* ---------- تبلت و موبایل ---------- */
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { padding: 10px; }
+  .category-list { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+  .category-list li { flex: 0 0 auto; white-space: nowrap; margin-bottom: 0; gap: 10px; }
+
+  .hero-content { max-width: 100%; padding: 28px 20px; }
+  .hero-content h1 { font-size: 24px; }
+
+  .hero-overlay {
+    background: linear-gradient(0deg, rgba(10, 9, 70, 0.85) 20%, rgba(10, 9, 22, 0.3) 100%);
+  }
+
+  .filters-row { flex-wrap: wrap; gap: 12px; }
+  .filter-group { flex: 1 1 140px; }
+  .filter-group select { min-width: 0; width: 100%; }
+}
+
+@media (max-width: 700px) {
+  .footer-inner { flex-direction: column; align-items: center; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  .games-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .game-card { padding: 10px; }
+  .price { font-size: 13px; }
+  .games-grid.list-view { grid-template-columns: 1fr; }
+  .games-grid.list-view .game-card { flex-wrap: wrap; }
+  .games-grid.list-view .price-row { min-width: 100%; }
+}
+
+.hero { min-height: 320px; margin-bottom: 26px; }
+.hero-content { padding: 50px 48px; }
+
+.filters-row { margin-top: 0; }
+
+.games-grid { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 900px) {
+  .games-grid { grid-template-columns: repeat(3, 1fr); }
+  .hero { min-height: 260px; }
+  .hero-content { padding: 28px 20px; }
+}
+@media (max-width: 600px) {
+  .games-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+
+/* ---------- ثبت‌نام داخل مودال ---------- */
+.modal-form-side { overflow-y: auto; max-height: 90vh; }
+
+.modal-switch {
+  margin-top: 16px; text-align: center; font-size: 13.5px;
+  color: var(--text-muted, #9A9AAE); direction: rtl;
+}
+.modal-switch a { color: var(--yellow, #F5D033); font-weight: bold; text-decoration: none; }
+.modal-switch a:hover { text-decoration: underline; }
+
+#signupBox h2, #signupBox p, #signupBox label { direction: rtl; }
+#signupEmail { direction: ltr; }
+
+.signup-msg {
+  display: none; padding: 10px 14px; border-radius: 8px;
+  font-size: 13px; margin-bottom: 14px; direction: rtl;
+}
+.signup-error   { background: rgba(239, 68, 68, 0.12); color: #ff8a8a; border: 1px solid rgba(239, 68, 68, 0.4); }
+.signup-success { background: rgba(34, 197, 94, 0.12); color: #6ee7a0; border: 1px solid rgba(34, 197, 94, 0.4); }
+
+
+
+.hero-features {
+  position: relative; z-index: 2;
+  display: flex; flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 22px;
+}
+.hero-feature {
+  font-size: 13px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.hero-features + .btn-filled,
+.hero-features + .button-1 { margin-top: 22px; }

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<link rel="stylesheet" href="../login-modal/login-modal.css">     
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameVault - بازی‌ها</title>
+<link rel="stylesheet" href="games.css">
+<link rel="stylesheet" href="games_fa.css">
+
+<link rel="stylesheet" href="../responsive.css">
+</head>
+<body>
+  <div class="fixed-icon-final">
+    <a href="../contact_us/contact.html">
+      <img src="../img/icons/contact_us.png" alt="تماس با ما" srcset="">
+    </a>
+  </div>
+
+
+  <!-- ===================== header ===================== -->
+  <header>
+    <div class="wrapper header-inner site-header">
+      <div class="logo">
+        <img src="../img/icons/game_valet_icon.png" alt="لوگوی GameVault">
+        Game<span>Vault</span>
+      </div>
+
+      <nav>
+        <a href="../home/game.html" >خانه</a>
+        <a href="../games/games.html">بازی‌ها</a>
+        <a href="../software/software.html">نرم‌افزار</a>
+        <a href="../gift-cards/gift-cards.html">گیفت کارت</a>
+        <a href="../deals/deals.html">تخفیف‌ها</a>
+      </nav>
+
+      <div class="header-actions icons">
+        <div class="search-box">
+          <a href=""><img src="../img/icons/search.png" alt="جستجو"></a>
+          <input type="text" placeholder="جستجوی بازی..." data-hints="Elden Ring|Cyberpunk 2077|Red Dead Redemption 2|God of War Ragnarök|Minecraft|Fortnite">
+        </div>
+        <div class="icon-btn">
+          <img src="../img/icons/shopping.png" alt="سبد خرید">
+        </div>
+        <div class="icon-btn js-open-login">
+          <img src="../img/icons/user.png" alt="حساب کاربری">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-wrap wrapper">
+    <span class="bg-streak"></span>
+
+    <!-- ===================== hero ===================== -->
+
+    <div class="hero">
+      <img src="../img/games/hero.png" alt="شخصیت علمی‌تخیلی" class="hero-bg">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <h1>  بازی مورد علاقه‌ات رو<br><span class="highlight"> همین حالا پیدا کن </span></h1>
+        <p> از ماجراجویی‌های نفس‌گیر تا نبردهای حماسی؛ بازی موردعلاقه‌ات رو پیدا کن و وارد دنیایی فراتر از واقعیت شو.</p>
+      </div>
+      <div class="hero-features">
+        <div class="hero-feature">🛡️ ۱۰۰٪ اصل</div>
+        <div class="hero-feature">⚡ تحویل فوری</div>
+        <div class="hero-feature">🎧 پشتیبانی ۲۴/۷</div>
+      </div>
+    </div>
+
+    <div class="layout">
+
+      <!-- ===================== sidebar ===================== -->
+      <aside class="sidebar">
+        <ul class="category-list">
+          <li data-cat="all" class="active">
+            <span><img src="../img/icons/gamepad__.png" alt="" class="cat-icon"> همه بازی‌ها</span>
+            <span class="count count-active">۲۴۸</span>
+          </li>
+          <li data-cat="action">
+            <span><img src="../img/icons/action.png" alt="" class="cat-icon"> اکشن</span>
+            <span class="count">۶۲</span>
+          </li>
+          <li data-cat="adventure">
+            <span><img src="../img/icons/adventure.png" alt="" class="cat-icon"> ماجراجویی</span>
+            <span class="count">۴۸</span>
+          </li>
+          <li data-cat="rpg">
+            <span><img src="../img/icons/role_gameplaying.png" alt="" class="cat-icon"> نقش‌آفرینی</span>
+            <span class="count">۳۷</span>
+          </li>
+          <li data-cat="sports">
+            <span><img src="../img/icons/sport.png" alt="" class="cat-icon"> ورزشی</span>
+            <span class="count">۲۱</span>
+          </li>
+          <li data-cat="racing">
+            <span><img src="../img/icons/racing.png" alt="" class="cat-icon"> مسابقه‌ای</span>
+            <span class="count">۱۸</span>
+          </li>
+          <li data-cat="strategy">
+            <span><img src="../img/icons/strategy.png" alt="" class="cat-icon"> استراتژی</span>
+            <span class="count">۱۶</span>
+          </li>
+          <li data-cat="simulation">
+            <span><img src="../img/icons/simulation.png" alt="" class="cat-icon"> شبیه‌سازی</span>
+            <span class="count">۱۵</span>
+          </li>
+          <li data-cat="horror">
+            <span><img src="../img/icons/horror.png" alt="" class="cat-icon"> ترسناک</span>
+            <span class="count">۱۱</span>
+          </li>
+          <li data-cat="puzzle">
+            <span><img src="../img/icons/puzzle.png" alt="" class="cat-icon"> معمایی</span>
+            <span class="count">۹</span>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="main-col">
+
+        <!-- ===================== filters ===================== -->
+        <div class="filters-row">
+          <div class="filter-group">
+            <label>مرتب‌سازی بر اساس</label>
+            <select>
+              <option>محبوب‌ترین</option>
+              <option>جدیدترین</option>
+              <option>قیمت: کم به زیاد</option>
+              <option>قیمت: زیاد به کم</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>پلتفرم</label>
+            <select>
+              <option>همه پلتفرم‌ها</option>
+              <option>PC</option>
+              <option>PlayStation</option>
+              <option>Xbox</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label>محدوده قیمت</label>
+            <select>
+              <option>همه قیمت‌ها</option>
+              <option>زیر ۳۰ میلیون ریال</option>
+              <option>۳۰ تا ۷۵ میلیون ریال</option>
+              <option>بالای ۷۵ میلیون ریال</option>
+            </select>
+          </div>
+
+          <div class="view-toggle">
+            <span class="view-btn active">⊞</span>
+            <span class="view-btn">☰</span>
+          </div>
+        </div>
+
+        <!-- ===================== games ===================== -->
+        <div class="games-grid">
+
+          <div class="game-card" data-cat="rpg">
+            <div class="card-image">
+              <a href="../game-detail/game-detail-elden-ring.html"></a><img src="../img/elder_ring/elder_ring__game.jpg" alt="Elden Ring"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS"><img src="../img/gift_cards/xbox.png" alt="Xbox"><img src="../img/icons/pc.png" alt="PC">
+              </div>
+            </div>
+            <h4>Elden Ring</h4>
+            <div class="rating-row">⭐ ۴٫۸ <span>(۱۲٫۴ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="59.99">۸۹٬۹۹۰٬۰۰۰ ریال</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+          <div class="game-card" data-cat="rpg">
+            <div class="card-image">
+              <a href="../game-detail/game-detail-cyber-punk-2077.html"><img src="../img/cyber_punk_2077/cyberpunk_game.jfif" alt="Cyberpunk 2077"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS"><img src="../img/gift_cards/xbox.png" alt="Xbox">
+              </div>
+            </div>
+            <h4>Cyberpunk 2077</h4>
+            <div class="rating-row">⭐ ۴٫۷ <span>(۱۰٫۲ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="49.99">۷۴٬۹۹۰٬۰۰۰ ریال</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+          <div class="game-card" data-cat="adventure">
+            <div class="card-image">
+              <a href="../game-detail/game-detail-red-dead-redemption.html"><img src="../img/red_dead_redmption/redDeadRedemption.jfif" alt="Red Dead Redemption 2"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS">
+              </div>
+            </div>
+            <h4>Red Dead Redemption 2</h4>
+            <div class="rating-row">⭐ ۴٫۹ <span>(۱۸٫۷ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="59.99">۸۹٬۹۹۰٬۰۰۰ ریال</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+          <div class="game-card" data-cat="action">
+            <div class="card-image">
+              <a href=""><img src="../img/games/call_of_duty_3.jpg" alt="Call of Duty: Modern Warfare III"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS">
+              </div>
+            </div>
+            <h4>Call of Duty: Modern Warfare III</h4>
+            <div class="rating-row">⭐ ۴٫۶ <span>(۱۴٫۳ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="69.99">۱۰۴٬۹۸۰٬۰۰۰ ریال</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+          <div class="game-card" data-cat="adventure">
+            <div class="card-image">
+              <a href=""><img src="../img/hogwarts/Hogwarts_legacyboxart.png" alt="Hogwarts Legacy"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS"><img src="../img/gift_cards/xbox.png" alt="Xbox">
+              </div>
+            </div>
+            <h4>Hogwarts Legacy</h4>
+            <div class="rating-row">⭐ ۴٫۵ <span>(۹٫۸ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="49.99">۷۴٬۹۹۰٬۰۰۰ ریال</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+          <div class="game-card" data-cat="racing">
+            <div class="card-image">
+              <a href=""><img src="../img/games/forza_5.jfif" alt="Forza Horizon 5"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS"><img src="../img/gift_cards/xbox.png" alt="Xbox">
+              </div>
+            </div>
+            <h4>Forza Horizon 5</h4>
+            <div class="rating-row">⭐ ۴٫۸ <span>(۱۱٫۶ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="59.99">۸۹٬۹۹۰٬۰۰۰ ریال</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+          <div class="game-card" data-cat="action">
+            <div class="card-image">
+              <a href="../game-detail/game-detail-spider-man-2.html"><img src="../img/spider_man_2/spi_2_game.jpg" alt="Spider-Man 2"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS"><img src="../img/gift_cards/xbox.png" alt="Xbox"><img src="../img/icons/pc.png" alt="PC">
+              </div>
+            </div>
+            <h4>Spider-Man 2</h4>
+            <div class="rating-row">⭐ ۴٫۷ <span>(۱۳٫۲ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="59.99">۸۹٬۹۹۰٬۰۰۰ ریال</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+          <div class="game-card" data-cat="action">
+            <div class="card-image">
+              <a href=""><img src="../img/games/god_of_war_regnarok.jpg" alt="God of War Ragnarök"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS"><img src="../img/gift_cards/xbox.png" alt="Xbox">
+              </div>
+            </div>
+            <h4>God of War Ragnarök</h4>
+            <div class="rating-row">⭐ ۴٫۹ <span>(۱۶٫۸ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="59.99">۸۹٬۹۹۰٬۰۰۰ ریال</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+          <div class="game-card" data-cat="adventure">
+            <div class="card-image">
+              <a href=""><img src="../img/games/horizon.jpg" alt="Horizon Forbidden West"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS"><img src="../img/gift_cards/xbox.png" alt="Xbox">
+              </div>
+            </div>
+            <h4>Horizon Forbidden West</h4>
+            <div class="rating-row">⭐ ۴٫۶ <span>(۱۲٫۱ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="49.99">۷۴٬۹۹۰٬۰۰۰ ریال</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+          <div class="game-card" data-cat="rpg">
+            <div class="card-image">
+              <a href=""><img src="../img/games/starfield.jfif" alt="Starfield"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS"><img src="../img/gift_cards/xbox.png" alt="Xbox">
+              </div>
+            </div>
+            <h4>Starfield</h4>
+            <div class="rating-row">⭐ ۴٫۳ <span>(۹٫۷ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="69.99">۱۰۴٬۹۸۰٬۰۰۰ ریال</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+          <div class="game-card" data-cat="horror">
+            <div class="card-image">
+              <a href=""><img src="../img/games/Resident-Evil-4-2023.jpg" alt="Resident Evil 4 Remake"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS"><img src="../img/gift_cards/xbox.png" alt="Xbox">
+              </div>
+            </div>
+            <h4>Resident Evil 4 Remake</h4>
+            <div class="rating-row">⭐ ۴٫۷ <span>(۱۱٫۹ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="49.99">۷۴٬۹۹۰٬۰۰۰ ریال</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+          <div class="game-card" data-cat="adventure">
+            <div class="card-image">
+              <a href=""><img src="../img/games/the_last_of_us.jpg" alt="The Last of Us Part I"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS"><img src="../img/gift_cards/xbox.png" alt="Xbox">
+              </div>
+            </div>
+            <h4>The Last of Us Part I</h4>
+            <div class="rating-row">⭐ ۴٫۸ <span>(۱۵٫۴ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="49.99">۷۴٬۹۹۰٬۰۰۰ ریال</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+          <div class="game-card" data-cat="action">
+            <div class="card-image">
+              <a href=""><img src="../img/gtav/Grand_Theft_Auto_V.png" alt="Grand Theft Auto V"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS"><img src="../img/gift_cards/xbox.png" alt="Xbox">
+              </div>
+            </div>
+            <h4>Grand Theft Auto V</h4>
+            <div class="rating-row">⭐ ۴٫۵ <span>(۲۰٫۳ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="29.99">۴۴٬۹۹۰٬۰۰۰ ریال</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+          <div class="game-card" data-cat="simulation">
+            <div class="card-image">
+              <a href=""><img src="../img/games/minecraft.jfif" alt="Minecraft"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS"><img src="../img/gift_cards/xbox.png" alt="Xbox">
+              </div>
+            </div>
+            <h4>Minecraft</h4>
+            <div class="rating-row">⭐ ۴٫۶ <span>(۲۲٫۷ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="19.99">۲۹٬۹۸۰٬۰۰۰ ریال</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+          <div class="game-card" data-cat="action">
+            <div class="card-image">
+              <a href=""><img src="../img/games/fortnite.jfif" alt="Fortnite"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS">
+              </div>
+            </div>
+            <h4>Fortnite</h4>
+            <div class="rating-row">⭐ ۴٫۴ <span>(۱۷٫۶ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="0.00">رایگان</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+          <div class="game-card" data-cat="rpg">
+            <div class="card-image">
+              <a href=""><img src="../img/the_witcher_3/the_witcher_3_game.jfif" alt="The Witcher 3: Wild Hunt"></a>
+              <div class="platform-badges">
+                <img src="../img/gift_cards/ps.png" alt="PS">
+              </div>
+            </div>
+            <h4>The Witcher 3: Wild Hunt</h4>
+            <div class="rating-row">⭐ ۴٫۸ <span>(۱۶٫۱ هزار)</span></div>
+            <div class="price-row">
+              <span class="price" data-usd="39.99">۵۹٬۹۹۰٬۰۰۰ ریال</span>
+              <span class="mini-cart-btn">🛒</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ===================== صفحه‌بندی ===================== -->
+        <div class="pagination">
+          <span class="page-btn">›</span>
+          <span class="page-btn">۱</span>
+          <span class="page-btn">۲</span>
+          <span class="page-btn">۳</span>
+          <span class="page-btn">۴</span>
+          <span class="page-btn">۵</span>
+          <span class="page-dots">…</span>
+          <span class="page-btn">۱۲</span>
+          <span class="page-btn">‹</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== footer ===================== -->
+  <footer>
+    <div class="wrapper footer-inner">
+      <div class="logo">
+        <img src="../img/icons/game_valet_icon.png" alt="لوگوی GameVault">
+        Game<span>Vault</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="../about_us/about.html">درباره ما</a>
+        <a href="../contact_us/contact.html">تماس با ما</a>
+        <a href="#">شرایط استفاده از خدمات</a>
+        <a href="#">حریم خصوصی</a>
+      </div>
+
+      <div class="social-links">
+        <span><img src="../img/icons/discord.png" alt="Discord"></span>
+        <span><img src="../img/icons/telegram.png" alt="Twitter"></span>
+        <span><img src="../img/icons/instagram.png" alt="Instagram"></span>
+        <span><img src="../img/icons/youtube.png" alt="YouTube"></span>
+
+      </div>
+    </div>
+  </footer>
+ <!-- ===================== modal ===================== -->
+
+<div class="modal-overlay" id="loginOverlay">
+  <div class="login-modal">
+    <button class="modal-close" id="loginClose">✕</button>
+
+    <div class="modal-form-side">
+      <h2>خوش برگشتی</h2>
+      <p>برای ادامه وارد حساب کاربری‌ات شو.</p>
+
+      <div class="error-banner" id="loginError"></div>
+      <div class="success-banner" id="loginSuccess"></div>
+
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="loginEmail">آدرس ایمیل</label>
+          <div class="input-icon-wrap">
+            <span class="input-icon-left">✉️</span>
+            <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">رمز عبور</label>
+          <div class="input-icon-wrap">
+            <span class="input-icon-left">🔒</span>
+            <input type="password" id="loginPassword" placeholder="رمز عبور" autocomplete="current-password" required>
+            <button type="button" class="toggle-password" id="togglePassword">👁️</button>
+          </div>
+        </div>
+
+        <div class="form-row-between">
+          <label class="remember-me">
+            <input type="checkbox">
+            مرا به خاطر بسپار
+          </label>
+          <a href="#" class="forgot-link">رمز عبورت را فراموش کرده‌ای؟</a>
+        </div>
+
+        <button type="submit" class="submit-btn">ورود</button>
+      </form>
+      <p class="modal-switch">حساب نداری؟ <a href="#" id="showSignup">ثبت‌نام</a></p>
+
+      <div id="signupBox" style="display:none">
+        <h2>ساخت حساب جدید</h2>
+        <p>اطلاعاتت را وارد کن تا حسابت ساخته شود.</p>
+
+        <div class="signup-msg signup-error" id="signupError"></div>
+        <div class="signup-msg signup-success" id="signupSuccess"></div>
+
+        <form id="signupForm" novalidate>
+          <div class="form-group">
+            <label for="signupName">نام و نام خانوادگی</label>
+            <div class="input-icon-wrap">
+              <span class="input-icon-left">👤</span>
+              <input type="text" id="signupName" placeholder="نام و نام خانوادگی" autocomplete="name" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signupEmail">آدرس ایمیل</label>
+            <div class="input-icon-wrap">
+              <span class="input-icon-left">✉️</span>
+              <input type="email" id="signupEmail" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signupPassword">رمز عبور</label>
+            <div class="input-icon-wrap">
+              <span class="input-icon-left">🔒</span>
+              <input type="password" id="signupPassword" placeholder="رمز عبور" autocomplete="new-password" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="signupConfirm">تکرار رمز عبور</label>
+            <div class="input-icon-wrap">
+              <span class="input-icon-left">🔒</span>
+              <input type="password" id="signupConfirm" placeholder="تکرار رمز عبور" autocomplete="new-password" required>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">ثبت‌نام</button>
+        </form>
+
+        <p class="modal-switch">قبلاً ثبت‌نام کرده‌ای؟ <a href="#" id="showLogin">ورود</a></p>
+      </div>
+    </div>
+
+    <div class="modal-image-side">
+
+      <video src="../login-modal/login-modal.mp4" autoplay muted loop playsinline></video>
+
+    </div>
+  </div>
+</div>
+
+<script src="../login-modal/login-modal.js"></script>
+<script src="games.js"></script>
+
+</body>
+</html>

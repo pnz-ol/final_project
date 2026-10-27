@@ -1,0 +1,414 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700;800&display=swap');
+
+/* ---------- ۱) فونت فارسی ---------- */
+
+body,
+input,
+button,
+select,
+textarea {
+  font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+}
+
+/* ---------- ۲) هدر: اندازه و فاصله‌ها (مرجع: صفحه اصلی) ---------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 60px;
+  max-width: none;
+  height: auto;
+  margin: 0;
+}
+
+.site-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.site-header .logo img {
+  width: 38px;
+  height: 38px;
+}
+
+
+.site-header nav,
+.site-header nav ul {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.site-header nav a {
+  display: block;
+  position: relative;
+  padding-bottom: 8px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+
+.site-header nav a.active {
+  color: var(--text);
+}
+.site-header nav a.active::after {
+  width: 100%;
+}
+
+
+.site-header .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: 0;
+}
+
+.site-header .search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 240px;
+  padding: 10px 18px;
+}
+
+.site-header .search-box input {
+  font-size: 14px;
+  direction: rtl;
+}
+
+.site-header .search-box a,
+.site-header .icon-btn,
+.site-header .icon-btn a {
+  display: flex;
+  align-items: center;
+}
+
+.site-header .header-actions img {
+  width: 20px;
+  height: 20px;
+  mix-blend-mode: screen;
+}
+
+
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* ---------- ۳) افکت تایپ (مکان‌نمای چشمک‌زن) ---------- */
+.eyebrow {
+  letter-spacing: 0; 
+  direction: rtl;
+}
+
+.eyebrow.typing::after {
+  content: '|';
+  color: var(--yellow);
+  margin-right: 4px;
+  animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ---------- ۴) ظاهر شدن آرام موقع اسکرول ---------- */
+.reveal {
+  opacity: 0;
+}
+.reveal.show {
+  animation: fadeUp 0.7s ease both;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; translate: 0 40px; }
+  to   { opacity: 1; translate: 0 0; }
+}
+
+/* ---------- ۵) نوار پیشرفت اسکرول ---------- */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  z-index: 10000;
+  background: linear-gradient(90deg, var(--yellow), var(--purple));
+  border-radius: 0 10px 10px 0;
+}
+
+/* ---------- ۶) تبلت و موبایل ---------- */
+@media (max-width: 900px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+ 
+  .site-header {
+    flex-wrap: wrap;
+    padding: 14px 18px;
+    gap: 12px 14px;
+  }
+
+
+  .site-header .header-actions {
+    display: contents;
+  }
+
+  .site-header .logo         { order: 1; margin-inline-end: auto; }
+  .site-header .icon-btn     { order: 2; }
+  .site-header .menu-toggle  { order: 3; display: flex; }
+  .site-header .search-box   { order: 4; width: 100%; }
+  .site-header nav           { order: 5; }
+
+
+  .site-header nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 6px 18px;
+    background: var(--panel);
+    border-radius: 14px;
+  }
+  .site-header nav.open {
+    display: flex;
+  }
+  .site-header nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  .site-header nav a {
+    padding: 14px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header .logo {
+    font-size: 20px;
+  }
+  .site-header .logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+
+  .fixed-icon-final {
+    bottom: 16px;
+    right: 16px;
+  }
+  .fixed-icon-final a img {
+    width: 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; }
+  .reveal.show { animation: none; }
+}
+
+/* ---------- مودال ورود (مثل صفحه مبنا) ---------- */
+.modal-overlay {
+  direction: ltr;
+}
+.modal-form-side h2,
+.modal-form-side p,
+.modal-form-side label,
+.forgot-link,
+.modal-tagline {
+  direction: rtl;
+}
+#loginEmail {
+  direction: ltr;  
+}
+
+
+/* =====================================================
+   بخش مخصوص صفحه تخفیف‌ها
+   ===================================================== */
+
+:root { --page-pad: 60px; }  
+@media (max-width: 900px) { :root { --page-pad: 20px; } }
+
+header { border-bottom: 0; }  
+
+
+.wrapper:not(.site-header) { max-width: none; padding: 0 var(--page-pad); }
+.catalog.wrapper { padding: 0 var(--page-pad) 50px; }
+.popular-section.wrapper { padding: 40px var(--page-pad) 50px; }
+
+
+.site-header { direction: ltr; }
+.footer-inner { direction: ltr; }
+
+
+.hero { direction: ltr; }
+.hero-content { direction: rtl; text-align: right; }
+
+
+.limited-content { direction: ltr; }
+.limited-content > div { direction: rtl; text-align: right; }
+
+.checkbox-row span { margin-left: 0; margin-right: auto; }
+.discount-badge { direction: ltr; unicode-bidi: isolate; }
+
+/* ---------- قیمت به ریال: قیمت قدیم بالا، قیمت جدید زیرش، دکمه سبد سمت چپ ---------- */
+.price-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "old cart" "new cart";
+  align-items: center;
+  gap: 2px 8px;
+}
+.price-old { grid-area: old; }
+.price-new { grid-area: new; font-size: 14px; }
+.mini-cart-btn { grid-area: cart; margin: 0; }
+
+/* ---------- حالت‌هایی که جاوا اسکریپت می‌سازد ---------- */
+.empty-message {
+  display: none; grid-column: 1 / -1; text-align: center;
+  color: var(--text-muted); padding: 40px 0;
+}
+.cart-badge { display: none; }
+.cart-badge.pop { animation: pop 0.4s ease; }
+@keyframes pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.6); }
+  100% { transform: scale(1); }
+}
+.countdown {
+  margin-top: 10px; color: var(--yellow);
+  font-size: 13.5px; font-weight: bold;
+}
+.filter-toggle { display: none; }
+
+/* ---------- بنر تخفیف‌های زمان‌دار: همان اندازه نوار اصلی ---------- */
+.limited-banner { aspect-ratio: 5.4 / 1; min-height: 190px; }
+
+/* ---------- تبلت و موبایل ---------- */
+@media (max-width: 900px) {
+  .catalog { grid-template-columns: 1fr; gap: 16px; }
+  .filter-toggle {
+    display: block; width: 100%; padding: 12px; font: inherit; cursor: pointer;
+    background: var(--panel); color: var(--text);
+    border: 1px solid var(--line); border-radius: 12px;
+  }
+  .sidebar { display: none; }
+  .sidebar.open { display: block; }
+
+  .hero { min-height: 240px; }
+  .hero-content { max-width: 100%; padding: 28px 20px; }
+  .hero-content h1 { font-size: 26px; }
+
+  .hero-overlay, .limited-overlay {
+    background: linear-gradient(0deg, rgba(10, 9, 22, 0.9) 25%, rgba(10, 9, 22, 0.35) 100%);
+  }
+
+  .limited-banner { aspect-ratio: auto; display: block; min-height: 0; }
+  .limited-bg { position: static; display: block; width: 100%; height: auto; }
+  .limited-overlay { display: none; }
+  .limited-content { flex-wrap: wrap; padding: 24px 20px; }
+}
+
+@media (max-width: 700px) {
+  .footer-inner { flex-direction: column; align-items: center; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  .deals-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .deal-card { padding: 10px; }
+  .price-new { font-size: 13px; }
+  .price-old { font-size: 11px; }
+  .limited-content { flex-direction: column; align-items: stretch; }
+  .limited-content .btn-filled { margin-left: 0; text-align: center; }
+}
+
+
+/* ---------- ثبت‌نام داخل مودال ---------- */
+.modal-form-side { overflow-y: auto; max-height: 90vh; }
+
+.modal-switch {
+  margin-top: 16px; text-align: center; font-size: 13.5px;
+  color: var(--text-muted, #9A9AAE); direction: rtl;
+}
+.modal-switch a { color: var(--yellow, #F5D033); font-weight: bold; text-decoration: none; }
+.modal-switch a:hover { text-decoration: underline; }
+
+#signupBox h2, #signupBox p, #signupBox label { direction: rtl; }
+#signupEmail { direction: ltr; }
+
+.signup-msg {
+  display: none; padding: 10px 14px; border-radius: 8px;
+  font-size: 13px; margin-bottom: 14px; direction: rtl;
+}
+.signup-error   { background: rgba(239, 68, 68, 0.12); color: #ff8a8a; border: 1px solid rgba(239, 68, 68, 0.4); }
+.signup-success { background: rgba(34, 197, 94, 0.12); color: #6ee7a0; border: 1px solid rgba(34, 197, 94, 0.4); }
+
+
+.limited-content {
+  direction: rtl;          
+  flex-direction: column;   
+  align-items: flex-start;  
+  justify-content: center;
+  gap: 10px;
+}
+.limited-content .btn-filled { margin: 0; }
+
+
+.limited-overlay {
+  background: linear-gradient(270deg, rgba(10, 9, 22, 0.85) 30%, rgba(10, 9, 22, 0.2) 100%);
+}
+
+@media (max-width: 600px) {
+  .limited-content { align-items: stretch; }
+}
+
+
+.hero-features {
+  position: relative; z-index: 2;
+  display: flex; flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-top: 22px;
+}
+.hero-feature {
+  font-size: 13px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.hero-features + .btn-filled,
+.hero-features + .button-1 { margin-top: 22px; }
